@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bharath Cares</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><button class="sidebar-btn active" onclick="showEmployees()">1. Employees</button></li>
+                <li><button class="sidebar-btn" onclick="showStudents()">2. Students</button></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button onclick="location.href='index.html'" class="logout-btn">Logout</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="admin-content">
+            <div class="admin-header">
+                <button class="sidebar-toggle-mobile" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h1>Admin Dashboard</h1>
+            </div>
+
+            <!-- Employees Section -->
+            <div id="employeesSection" class="content-section">
+                <div class="section-header">
+                    <h2>Employees Management</h2>
+                    <div class="action-buttons">
+                        <button class="btn-primary" onclick="showCreateEmployee()">Create New Employee</button>
+                    </div>
+                </div>
+
+                <!-- Employee List -->
+                <div id="employeeListContainer" class="employee-list-container">
+                    <h3>All Employees</h3>
+                    <div id="employeeList" class="employee-list"></div>
+                </div>
+
+                <!-- Create Employee Form -->
+                <div id="createEmployeeForm" class="form-container" style="display:none;">
+                    <h3>Create New Employee</h3>
+                    <input type="text" id="newEmpName" placeholder="Employee Name" required>
+                    <input type="text" id="newEmpId" placeholder="Employee ID" required>
+                    <input type="password" id="newEmpPassword" placeholder="Password" required>
+                    <div class="form-buttons">
+                        <button class="btn-primary" onclick="createEmployee()">Create Employee</button>
+                        <button class="btn-secondary" onclick="cancelCreateEmployee()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Students Section -->
+            <div id="studentsSection" class="content-section" style="display:none;">
+                <h2>Students Management</h2>
+                <p>Student section will be implemented later.</p>
+            </div>
+
+            <!-- Employee Details Modal -->
+            <div id="employeeDetailsModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closeEmployeeDetails()">&times;</span>
+                    <h2 id="employeeDetailsName">Employee Details</h2>
+                    <div id="employeeDetailsContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

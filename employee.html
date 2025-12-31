@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - Bharath Cares</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="employee-wrapper">
+        <div class="employee-header">
+            <h1>Employee Dashboard</h1>
+            <div class="status-control">
+                <button id="activeBtn" class="active-status-btn">Active</button>
+                <span id="statusIndicator" class="status-indicator offline">Offline</span>
+            </div>
+        </div>
+
+        <div class="employee-content">
+            <div class="work-entry-section">
+                <h2>Enter Today's Work</h2>
+                <form id="workEntryForm" class="work-form">
+                    <div class="form-group">
+                        <label>Date:</label>
+                        <input type="date" id="workDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>School Name:</label>
+                        <input type="text" id="schoolName" placeholder="Enter School Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Location:</label>
+                        <input type="text" id="location" placeholder="Enter Location" required>
+                    </div>
+                    <div class="form-group">
+                        <label>School Picture URL:</label>
+                        <input type="text" id="picUrl" placeholder="Enter School Picture URL">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Students Registered:</label>
+                        <input type="number" id="studentsRegistered" placeholder="Enter number" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Schools:</label>
+                        <input type="number" id="numberOfSchools" placeholder="Enter number" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Work Description:</label>
+                        <textarea id="workDescription" placeholder="Enter work description" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Work</button>
+                </form>
+            </div>
+
+            <div class="work-history-section">
+                <h2>My Work History</h2>
+                <div id="workHistory" class="work-history"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

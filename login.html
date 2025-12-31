@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bharath Cares</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Bharath Cares</div>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <button onclick="location.href='login.html'" class="login-btn">Login</button>
+    </nav>
+
+    <div class="login-container">
+        <h2>Select User Type</h2>
+        <div class="user-types">
+            <button id="adminBtn" class="user-type-btn">1. Admin</button>
+            <button id="employeeBtn" class="user-type-btn">2. Employee</button>
+            <button id="studentBtn" class="user-type-btn">3. Student</button>
+        </div>
+
+        <div id="loginForm" class="login-form" style="display:none;">
+            <h3 id="loginTitle">Login</h3>
+            <input type="text" id="userId" placeholder="Enter ID">
+            <input type="password" id="userPassword" placeholder="Enter Password">
+            <button id="loginSubmit" class="submit-btn">Login</button>
+            <p id="loginError" class="error-message"></p>
+            <button onclick="resetLoginForm()" class="back-btn">Back</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
